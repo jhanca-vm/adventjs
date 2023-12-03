@@ -1,15 +1,11 @@
 import { assertEquals } from 'assert'
 
 function findFirstRepeated(gifts: number[]) {
-  const set = new Set<number>()
-
-  for (const gift of gifts) {
-    if (set.has(gift)) return gift
-
-    set.add(gift)
+  const isRepeated = (gift: number, currentIndex: number) => {
+    return gifts.indexOf(gift) !== currentIndex
   }
 
-  return -1
+  return gifts.find(isRepeated) ?? -1
 }
 
 Deno.test('Reto #1: 🎁 ¡Primer regalo repetido!', () => {

@@ -1,11 +1,13 @@
 import { assertEquals } from 'assert'
 
 function manufacture(gifts: string[], materials: string) {
-  const hasMaterials = (gift: string) => {
-    return gift.split('').every((material) => materials.includes(material))
+  const hasAllMaterials = (gift: string) => {
+    const set = new Set(gift + materials)
+
+    return set.size === materials.length
   }
 
-  return gifts.filter(hasMaterials)
+  return gifts.filter(hasAllMaterials)
 }
 
 Deno.test('Reto #2: 🏭 Ponemos en marcha la fábrica', () => {
