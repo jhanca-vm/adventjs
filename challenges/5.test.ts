@@ -1,18 +1,24 @@
 import { assertEquals } from 'assert'
 
 function cyberReindeer(road: string, time: number) {
-  let position = 0
+  const result = [road]
 
-  road = `.${road.slice(1)}`
+  road = road.replace('S', '.')
 
-  return Array.from({ length: time }, (_, index) => {
-    const value = road.slice(0, position) + 'S' + road.slice(position + 1)
+  for (let index = 1; index < time; index++) {
+    let previous = result.at(-1)!
 
-    if (index === 4) road = road.replaceAll('|', '*')
-    if (road[position + 1] !== '|') position++
+    if (index === 5) {
+      previous = previous.replaceAll('|', '*')
+      road = previous.replace('S', '.')
+    }
 
-    return value
-  })
+    const value = road[previous.indexOf('S')] + 'S'
+
+    result.push(previous.replace(/S[\.\*]/, value))
+  }
+
+  return result
 }
 
 Deno.test('Reto #5: 🛷 El CyberTruck de Santa', () => {
