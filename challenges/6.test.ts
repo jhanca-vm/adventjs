@@ -2,10 +2,10 @@ import { assertEquals } from 'assert'
 
 function maxDistance(movements: string) {
   const left = movements.match(/</g)?.length ?? 0
-  const rigth = movements.match(/>/g)?.length ?? 0
-  const both = movements.match(/\*/g)?.length ?? 0
+  const right = movements.match(/>/g)?.length ?? 0
+  const both = movements.length - left - right
 
-  return Math.max(left, rigth) + both - Math.min(left, rigth)
+  return Math.max(left, right) + both - Math.min(left, right)
 }
 
 Deno.test('Reto #6: 🦌 Los renos a prueba', () => {
