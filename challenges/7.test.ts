@@ -1,26 +1,23 @@
 import { assertEquals } from 'assert'
 
 function drawGift(size: number, symbol: string) {
-  if (size < 2) return '#\n'
+  const base = `${'#'.repeat(size)}\n`
+  const length = Math.max(size - 2, 0)
+  const center = `${'#'.repeat(size)}${symbol.repeat(length)}#\n`
 
-  const base = '#'.repeat(size)
-  const lines = [`${' '.repeat(size - 1)}${base}\n`]
+  let top = ''
+  let bottom = ''
 
-  size -= 2
+  for (const index of Array.from({ length }).keys()) {
+    const line = `#${symbol.repeat(length)}#${symbol.repeat(index)}#\n`
 
-  for (let index = 0; index < size; index++) {
-    const spaces = ' '.repeat(size - index)
-    const topSymbols = symbol.repeat(size)
-    const rightSymbols = symbol.repeat(index)
-
-    lines.push(`${spaces}#${topSymbols}#${rightSymbols}#\n`)
+    top += ' '.repeat(length - index) + line
+    bottom = line + bottom
   }
 
-  const top = lines.join('')
-  const center = `${base}${symbol.repeat(size)}#\n`
-  const bottom = lines.reverse().join('').trimStart()
+  const rest = top + center + bottom + base
 
-  return top + center + bottom.replace(/\n\s+/g, '\n')
+  return ' '.repeat(size - 1) + base + rest.repeat(+!!(size - 1))
 }
 
 Deno.test('Reto #7: 📦 Las cajas en 3D', () => {
