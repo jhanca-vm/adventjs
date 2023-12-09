@@ -13,3 +13,4 @@ Solución a los retos de [👨🏽‍💻 AdventJS](https://adventjs.dev) con
 | 06 | [🦌 Los renos a prueba](https://adventjs.dev/es/challenges/2023/6)                | [Solución](/challenges/6.test.ts) |
 | 07 | [📦 Las cajas en 3D](https://adventjs.dev/es/challenges/2023/7)                   | [Solución](/challenges/7.test.ts) |
 | 08 | [🏬 Ordenando el almacén](https://adventjs.dev/es/challenges/2023/8)              | [Solución](/challenges/8.test.ts) |
+| 09 | [🚦 Alterna las luces](https://adventjs.dev/es/challenges/2023/9)                 | [Solución](/challenges/9.test.ts) |
