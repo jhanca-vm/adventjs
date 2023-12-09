@@ -6,20 +6,18 @@ function organizeGifts(gifts: string) {
 
   let result = ''
 
-  for (const [index, type] of types.entries()) {
-    let quantity = Number(quantities[index])
+  for (const type of types) {
+    let quantity = +quantities[types.indexOf(type)]
 
-    const pallets = `[${type}]`.repeat(Math.floor(quantity / 50))
+    result += `[${type}]`.repeat(quantity / 50)
 
     quantity %= 50
 
-    const boxes = `{${type}}`.repeat(Math.floor(quantity / 10))
+    result += `{${type}}`.repeat(quantity / 10)
 
     quantity %= 10
 
-    const bags = `(${type.repeat(quantity)})`.repeat(+!!quantity)
-
-    result += pallets + boxes + bags
+    result += `(${type.repeat(quantity)})`.repeat(+!!quantity)
   }
 
   return result
