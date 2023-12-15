@@ -17,3 +17,4 @@ Solución a los retos de [👨🏽‍💻 AdventJS](https://adventjs.dev) con
 | 10 | [🎄 Crea tu propio árbol de navidad](https://adventjs.dev/es/challenges/2023/10)  | [Solución](/challenges/10.test.ts) |
 | 11 | [📖 Los elfos estudiosos](https://adventjs.dev/es/challenges/2023/11)             | [Solución](/challenges/11.test.ts) |
 | 12 | [📸 ¿Es una copia válida?](https://adventjs.dev/es/challenges/2023/12)            | [Solución](/challenges/12.test.ts) |
+| 13 | [⌚ Calculando el tiempo](https://adventjs.dev/es/challenges/2023/13)             | [Solución](/challenges/13.test.ts) |
