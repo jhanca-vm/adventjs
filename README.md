@@ -20,3 +20,4 @@ Solución a los retos de [👨🏽‍💻 AdventJS](https://adventjs.dev) con
 | 13 | [⌚ Calculando el tiempo](https://adventjs.dev/es/challenges/2023/13)             | [Solución](/challenges/13.test.ts) |
 | 14 | [🚨 Evita la alarma](https://adventjs.dev/es/challenges/2023/14)                  | [Solución](/challenges/14.test.ts) |
 | 15 | [↔️ Robot autónomo](https://adventjs.dev/es/challenges/2023/15)                    | [Solución](/challenges/15.test.ts) |
+| 16 | [❌ Despliegue en viernes](https://adventjs.dev/es/challenges/2023/16)            | [Solución](/challenges/16.test.ts) |
