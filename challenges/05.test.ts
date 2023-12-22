@@ -1,17 +1,18 @@
 import { assertEquals } from 'assert'
 
 function cyberReindeer(road: string, time: number) {
+  const indices = [...new Array(time).keys()]
   const result = [road]
 
   road = road.replace('S', '.')
 
-  for (let index = 1; index < time; index++) {
+  for (const index of indices.slice(1)) {
+    const isOpening = index === 5
+
     let previous = result.at(-1)!
 
-    if (index === 5) {
-      previous = previous.replaceAll('|', '*')
-      road = previous.replace('S', '.')
-    }
+    previous = [previous, previous.replaceAll('|', '*')][+isOpening]
+    road = [road, previous.replace('S', '.')][+isOpening]
 
     const value = road[previous.indexOf('S')] + 'S'
 

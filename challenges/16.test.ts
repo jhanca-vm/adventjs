@@ -14,6 +14,7 @@ function transformTree(tree: (number | null)[]) {
     Object.assign(parent ?? {}, child)
 
     nodes.push(node)
+
     index++
   }
 

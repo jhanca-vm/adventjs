@@ -1,21 +1,22 @@
 import { assertEquals } from 'assert'
 
 function findNaughtyStep(original: string, modified: string) {
-  if (modified === original) return ''
-
+  let result = ''
   let index = 0
 
-  for (const modifiedValue of modified) {
+  for (const modifiedValue of [modified, ''][+(modified === original)]) {
     const originalValue = original[index]
+    const nextOriginalValue = original[index + 1]
+    const isDeleted = modifiedValue === nextOriginalValue
+    const step = [modifiedValue, originalValue][+isDeleted]
 
-    if (modifiedValue !== originalValue) {
-      const nextOriginalValue = original[index + 1]
+    if (modifiedValue !== originalValue) return step
 
-      return nextOriginalValue === modifiedValue ? originalValue : modifiedValue
-    }
-
+    result = nextOriginalValue
     index++
   }
+
+  return result
 }
 
 Deno.test('Reto #3: 😏 El elfo travieso', () => {

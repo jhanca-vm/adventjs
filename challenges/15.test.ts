@@ -14,7 +14,6 @@ function autonomousDrive(store: string[], movements: string[]) {
     const value = [-1, 1][+('RD'.includes(movement))]
 
     state[axis] += value
-
     position = [position, state][+(store[state.y]?.[state.x] === '.')]
   }
 

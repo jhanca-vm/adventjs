@@ -10,13 +10,9 @@ function organizeGifts(gifts: string) {
     let quantity = +quantities[types.indexOf(type)]
 
     result += `[${type}]`.repeat(quantity / 50)
-
     quantity %= 50
-
     result += `{${type}}`.repeat(quantity / 10)
-
     quantity %= 10
-
     result += `(${type.repeat(quantity)})`.repeat(+!!quantity)
   }
 

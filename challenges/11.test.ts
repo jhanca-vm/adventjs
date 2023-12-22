@@ -21,7 +21,6 @@ function getIndexsForPalindrome(word: string) {
       const isPalindrome = copy.join('') === copy.reverse().join('')
 
       result = [result, [index, nextIndex]][+isPalindrome]
-
       nextIndex++
     }
 
