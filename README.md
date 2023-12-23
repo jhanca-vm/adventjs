@@ -22,3 +22,4 @@ Solución a los retos de [👨🏽‍💻 AdventJS](https://adventjs.dev) con
 | 15 | [↔️ Robot autónomo](https://adventjs.dev/es/challenges/2023/15)                    | [Solución](/challenges/15.test.ts) |
 | 16 | [❌ Despliegue en viernes](https://adventjs.dev/es/challenges/2023/16)            | [Solución](/challenges/16.test.ts) |
 | 17 | [🛷 Optimizando el alquiler](https://adventjs.dev/es/challenges/2023/17)          | [Solución](/challenges/17.test.ts) |
+| 18 | [🔢 El reloj digital](https://adventjs.dev/es/challenges/2023/18)                 | [Solución](/challenges/18.test.ts) |
